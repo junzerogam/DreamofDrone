@@ -16,8 +16,8 @@
    - 결합한 후<br>![image](https://user-images.githubusercontent.com/71144019/166268482-0ab58f15-482d-433f-8191-515c19ac1213.png)<br>  
    **USIM을 등록시켜서 LTE를 끄고 켜는 것이 가능하게 연결 완료.**<br>
    ![image](https://user-images.githubusercontent.com/71144019/166268661-ead9b15d-b9fa-4f46-8428-1af73907b916.png)<br>![image](https://user-images.githubusercontent.com/71144019/166268683-aaaa8358-4f61-4a14-873d-caece1f10c54.png)<br>
-   - 문제점 :  mavproxy로 드론에 연결하려 했지만 계속 오류가 남.
-        - 해결방법 : 다시 라즈베리파이 os 설치하고 , FC와 라즈베리파이를 usb로 직접 연결시켜서 해결.<br>  
+   - 문제점 :  mavproxy로 라즈베리파이를 통한 드론의 FC에 연결하려 했지만 계속 오류가 남.
+        - 해결방법 : 다시 라즈베리파이 os 설치하고 , FC를 라즈베리파이의 usb 포트로 직접 연결시켜서 해결.<br>  
  
    **라즈베리파이와 FC에 원격으로 접속 성공.**<br>
    ![image](https://user-images.githubusercontent.com/71144019/166268914-edbf3a2a-8035-4cc0-9ee8-53c328e68869.png)<br>
