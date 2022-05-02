@@ -18,9 +18,9 @@
    ![image](https://user-images.githubusercontent.com/71144019/166268661-ead9b15d-b9fa-4f46-8428-1af73907b916.png)<br>![image](https://user-images.githubusercontent.com/71144019/166268683-aaaa8358-4f61-4a14-873d-caece1f10c54.png)<br>
    - 문제점 :  mavproxy로 드론에 연결하려 했지만 계속 오류가 남.
         - 해결방법 : 다시 라즈베리파이 os 설치하고 , FC와 라즈베리파이를 usb로 직접 연결시켜서 해결.
-   **라즈베리파이와 FC에 원격으로 접속 성공.**
+   **라즈베리파이와 FC에 원격으로 접속 성공.**<br>
    ![image](https://user-images.githubusercontent.com/71144019/166268914-edbf3a2a-8035-4cc0-9ee8-53c328e68869.png)
-   **Reverse SSH 통신을 통해 드론에 원격으로 접속할 수 있도록 설정 성공.**
+   **Reverse SSH 통신을 통해 드론에 원격으로 접속할 수 있도록 설정 성공.**<br>
    ![image](https://user-images.githubusercontent.com/71144019/166268968-8bec9c1b-7917-444b-9d5d-f93f52198918.png)
 
   • 임베디드 팀
