@@ -11,7 +11,9 @@
   • 통신 팀 
   
    - LTE 모듈을 드론에 결합 완료.
-   - ![image](https://user-images.githubusercontent.com/71144019/166268348-cd7665ff-cf92-4b65-8882-4a931e2dbfa4.png)
+   - 결합하기 전 : ![image](https://user-images.githubusercontent.com/71144019/166268348-cd7665ff-cf92-4b65-8882-4a931e2dbfa4.png)
+   - 결합한 후 : ![image](https://user-images.githubusercontent.com/71144019/166268482-0ab58f15-482d-433f-8191-515c19ac1213.png)
+
 
   • 임베디드 팀
   
