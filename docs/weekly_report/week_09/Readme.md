@@ -12,7 +12,7 @@
   
    **LTE 모듈을 드론에 결합 완료.**
    - 결합하기 전 : ![image](https://user-images.githubusercontent.com/71144019/166268348-cd7665ff-cf92-4b65-8882-4a931e2dbfa4.png)
-   - 결합한 후 : ![image](https://user-images.githubusercontent.com/71144019/166268482-0ab58f15-482d-433f-8191-515c19ac1213.png)
+   - 결합한 후 : ![image](https://user-images.githubusercontent.com/71144019/166268482-0ab58f15-482d-433f-8191-515c19ac1213.png)<br>
    **USIM을 등록시켜서 LTE를 끄고 켜는 것이 가능하게 연결 완료.**
    ![image](https://user-images.githubusercontent.com/71144019/166268661-ead9b15d-b9fa-4f46-8428-1af73907b916.png)![image](https://user-images.githubusercontent.com/71144019/166268683-aaaa8358-4f61-4a14-873d-caece1f10c54.png)
    - 문제점 :  mavproxy로 드론에 연결하려 했지만 계속 오류가 남.
