@@ -8,16 +8,16 @@
 
  <h4>진행 상황</h4> 
   
-  • 통신 팀 
+  - 통신 팀 
   
    **쓰레기통의 라즈베리파이가 드론의 와이파이에 접속하여 쓰레기통의 센서 값들을 소켓 통신을 통해 드론으로 전달하는 구현 성공.**
-   - 1) 드론와이파이에 접속.<br>
+   1) 드론와이파이에 접속.<br>
    ![image](https://user-images.githubusercontent.com/71144019/167896210-0c448d8a-a3a2-4bea-ac73-3810347faf70.png)
-   - 2) 소켓통신으로 쓰레기통과 연결.<br>
+   2) 소켓통신으로 쓰레기통과 연결.<br>
    ![image](https://user-images.githubusercontent.com/71144019/167896320-f47318b2-2728-412b-ab64-e1c82042342e.png)<br>  
-   - 3) 쓰레기통의 센서들 값을 출력하고 전달.<br>
+   3) 쓰레기통의 센서들 값을 출력하고 전달.<br>
    ![image](https://user-images.githubusercontent.com/71144019/167896413-84cc0318-8c30-4cda-ad55-df95e108605a.png)<br>
-   - 4) 받아온 값 드론에서 출력.<br>
+   4) 받아온 값 드론에서 출력.<br>
    ![image](https://user-images.githubusercontent.com/71144019/167896491-30075770-3290-4e20-8f0f-3c14c861e914.png)<br>
 
   - 임베디드 팀
