@@ -2,11 +2,10 @@ import RPi.GPIO as GPIO
 import time
 from socket import *
 
-#####################USE SOCKET########################
-#port = 9000
-#clientSock = socket(AF_INET,SOCK_STREAM)
-#clientSock.connect(('10.0.1.128',port))
-#######################################################
+port = 9000
+clientSock = socket(AF_INET,SOCK_STREAM)
+clientSock.connect(('10.0.1.128',port))
+
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -32,7 +31,7 @@ def umpa_forOpen() :
     open_distance = pulse_duration * 17000
     open_distance = round(open_distance, 2)
 
-    return open_distance;
+    return open_distance
 
 trig_trash = 23
 echo_trash = 24
@@ -55,19 +54,12 @@ def umpa_forTrash() :
     trash_distance = pulse_duration * 17000
     trash_distance = round(trash_distance, 2)
 
-    return trash_distance;
+    return trash_distance
 
 DT =21
 SCK=20
 
 GPIO.setup(SCK, GPIO.OUT)
-
-def setCursor(x,y):
-    if y == 0:
-        n=128+x
-    elif y == 1:
-        n=192+x
-    lcdcmd(n)
 
 def readCount():
     i=0
@@ -121,6 +113,20 @@ def move_head() :
 def return_head() :
     SERVO_PWM.ChangeDutyCycle(0.1)
 
+def Check_Volume_Percentage(distance) :
+
+    standard = 20
+    
+    if distance == 19 or distance == 20 :
+        percentage = 0
+    else :
+        percentage = 100 - (distance / standard * 100)
+
+    if percentage < 0 :
+        percentage = 0
+    
+    return percentage
+
 """---------MAIN---------"""
 
 print("Ready to Check weight and distance")
@@ -136,6 +142,7 @@ while True:
     weight = checkweight(sample, count)
     open_distance = umpa_forOpen()
     trash_distance = umpa_forTrash()
+    trash_volume_percentage = Check_Volume_Percentage(trash_distance)
 
     if open_distance <= 7 :
         move_head()
@@ -147,23 +154,22 @@ while True:
     if flag == True :
         print("Change Trash Can Please")
 
-    ################SEND DRONE############################
-    #strdistance = str(distance)
-    #strweight = str(weight)
-    #sendDistanceData = strdistance
-    #sendWeightData= strweight
-    #clientSock.send(sendDistanceData.encode('utf-8'))
+    strdistance = str(distance)
+    strweight = str(weight)
+    sendDistanceData = strdistance
+    sendWeightData= strweight
+    clientSock.send(sendDistanceData.encode('utf-8'))
 
-    #print("distance = ",sendDistanceData.encode('utf-8'))
-    #time.sleep(1)
-    #clientSock.send(sendWeightData.encode('utf-8'))
-    #print("weight = ",weight)
-    #time.sleep(1)
-    ######################################################
-
+    print("distance = ",sendDistanceData.encode('utf-8'))
+    time.sleep(1)
+    clientSock.send(sendWeightData.encode('utf-8'))
+    print("weight = ",weight)
+    time.sleep(1)
+    
     print("open distance : %d cm" %(open_distance))
     print("trash distance : %d cm" %(trash_distance))
     print("%d g" %(weight))
+    print("trash_volume : %d cm" %(trash_volume_percentage))
 
     time.sleep(1)
 
