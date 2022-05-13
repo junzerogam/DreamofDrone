@@ -1,11 +1,12 @@
 import RPi.GPIO as GPIO
 import time
-from socket import *
+#from socket import *
 
-port = 9000
-clientSock = socket(AF_INET,SOCK_STREAM)
-clientSock.connect(('10.0.1.128',port))
-
+#####################USE SOCKET########################
+#port = 9000
+#clientSock = socket(AF_INET,SOCK_STREAM)
+#clientSock.connect(('10.0.1.128',port))
+#######################################################
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -99,6 +100,19 @@ def changeflag(weight, distance):
         change_flag = True
 
     return change_flag
+
+def checkVolume(distance) :
+    standard = 19
+
+    if distance == 19 or distance == 20 :
+        percentage = 0
+    else :
+        percentage = 100 - (distance / standard * 100)
+    
+    if percentage < 0 :
+        percentage = 0
+
+    return percentage
         
 SERVO = 15
 GPIO.setup(SERVO,GPIO.OUT)
@@ -112,20 +126,6 @@ def move_head() :
 
 def return_head() :
     SERVO_PWM.ChangeDutyCycle(0.1)
-
-def Check_Volume_Percentage(distance) :
-
-    standard = 20
-    
-    if distance == 19 or distance == 20 :
-        percentage = 0
-    else :
-        percentage = 100 - (distance / standard * 100)
-
-    if percentage < 0 :
-        percentage = 0
-    
-    return percentage
 
 """---------MAIN---------"""
 
@@ -142,7 +142,7 @@ while True:
     weight = checkweight(sample, count)
     open_distance = umpa_forOpen()
     trash_distance = umpa_forTrash()
-    trash_volume_percentage = Check_Volume_Percentage(trash_distance)
+    trash_volume = checkVolume(trash_distance)
 
     if open_distance <= 7 :
         move_head()
@@ -154,22 +154,24 @@ while True:
     if flag == True :
         print("Change Trash Can Please")
 
-    strdistance = str(distance)
-    strweight = str(weight)
-    sendDistanceData = strdistance
-    sendWeightData= strweight
-    clientSock.send(sendDistanceData.encode('utf-8'))
+    ################SEND DRONE############################
+    #strdistance = str(distance)
+    #strweight = str(weight)
+    #sendDistanceData = strdistance
+    #sendWeightData= strweight
+    #clientSock.send(sendDistanceData.encode('utf-8'))
 
-    print("distance = ",sendDistanceData.encode('utf-8'))
-    time.sleep(1)
-    clientSock.send(sendWeightData.encode('utf-8'))
-    print("weight = ",weight)
-    time.sleep(1)
-    
+    #print("distance = ",sendDistanceData.encode('utf-8'))
+    #time.sleep(1)
+    #clientSock.send(sendWeightData.encode('utf-8'))
+    #print("weight = ",weight)
+    #time.sleep(1)
+    ######################################################
+
     print("open distance : %d cm" %(open_distance))
     print("trash distance : %d cm" %(trash_distance))
     print("%d g" %(weight))
-    print("trash_volume : %d cm" %(trash_volume_percentage))
+    print("trash_volume : %d %" %(trash_volume))
 
     time.sleep(1)
 
