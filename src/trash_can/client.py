@@ -173,7 +173,7 @@ while True:
     ##########################SEND DRONE############################
     intDistance = int(trash_distance)
     intWeight = int(weight)
-    intvolumepercentage = int(trash_volume_percentage)
+    intvolumepercentage = int(trash_volume)
     sendDistanceData = str(intDistance)
     sendWeightData = str(intWeight)
     sendVolumePercentage = str(intvolumepercentage)
