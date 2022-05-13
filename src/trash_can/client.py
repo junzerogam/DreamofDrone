@@ -129,9 +129,16 @@ def return_head() :
     SERVO_PWM.ChangeDutyCycle(0.1)  # servo degree(origin)
 
 # calculate distance to percent
-def check_Volume_Percentage(distance) :
-    standard = 20   # distance from top to bottom
-    percentage = 100 - (distance / standard * 100) 
+def checkVolume(distance) :
+    standard = 19
+
+    if distance == 19 or distance == 20 :
+        percentage = 0
+    else :
+        percentage = 100 - (distance / standard * 100)
+    
+    if percentage < 0 :
+        percentage = 0
 
     return percentage
 
@@ -150,7 +157,7 @@ while True:
     weight = checkweight(sample, count)
     open_distance = umpa_forOpen()
     trash_distance = umpa_forTrash()
-    trash_volume_percentage = check_Volume_Percentage(trash_distance)
+    trash_volume = checkVolume(trash_distance)
 
     # under 7cm then open
     if open_distance <= 7 :
@@ -180,7 +187,7 @@ while True:
     print("open distance : %d cm" %(open_distance))
     print("trash distance : %d cm" %(trash_distance))
     print("%d g" %(weight))
-    print("trash_volume : %d cm" %(trash_volume_percentage))
+    print("trash_volume : %d cm" %(trash_volume))
 
     time.sleep(1)
 
