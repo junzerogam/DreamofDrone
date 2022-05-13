@@ -153,8 +153,8 @@ sample = readCount()    # read weight sensor initial data
 
 while True:
     count = readCount()
-    weight = 0
-    weight = checkweight(sample, count)
+    trash_weight = 0
+    trash_weight = checkweight(sample, count)
     open_distance = umpa_forOpen()
     trash_distance = umpa_forTrash()
     trash_volume = checkVolume(trash_distance)
@@ -165,29 +165,31 @@ while True:
     else :
         return_head()
 
-    flag = changeflag(weight, trash_distance)
+    flag = changeflag(trash_weight, trash_distance)
 
     if flag == True :
         print("Change Trash Can Please")
 
-    ##########################SEND DRONE############################
-    intDistance = int(trash_distance)
-    intWeight = int(weight)
-    intvolumepercentage = int(trash_volume)
-    sendDistanceData = str(intDistance)
-    sendWeightData = str(intWeight)
-    sendVolumePercentage = str(intvolumepercentage)
-
-    clientSock.send(sendDistanceData.encode('utf-8'))
-    clientSock.send(sendWeightData.encode('utf-8'))
-    clientSock.send(sendVolumePercentage.encode('utf-8'))
+    ##########################SEND DRONE###########################
+    intTrashDistance = int(trash_distance)
+    intTrashWeight = int(trash_weight)
+    intTrashVolume = int(trash_volume)
+    sendTrashDistance = str(intTrashDistance)
+    sendTrashWeight = str(intTrashWeight)
+    sendTrashVolume = str(intTrashVolume)
+    
+    clientSock.send(sendTrashWeight.encode('utf-8'))
+    nothing = clientSock.recv(1024)
+    clientSock.send(sendTrashDistance.encode('utf-8'))
+    nothing = clientSock.recv(1024)
+    clientSock.send(sendTrashVolume.encode('utf-8'))
+    nothing = clientSock.recv(1024)
     ################################################################
 
     # print terminal
     print("open distance : %d cm" %(open_distance))
+    print("trash_weight : %d g" %(trash_weight))
     print("trash distance : %d cm" %(trash_distance))
-    print("%d g" %(weight))
-    print("trash_volume : %d cm" %(trash_volume))
+    print("trash_volume : %d %%\n" %(trash_volume))
 
     time.sleep(1)
-
