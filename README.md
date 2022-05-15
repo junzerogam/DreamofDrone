@@ -39,7 +39,7 @@
 
 <br>
 아키텍처 과정 설명<br>
-1. ~~모듈 설치~~<br>
+1. 모듈 설치 X<br>
 2. MavProxy로 FC 통신<br>
 3. reverse SSH 설정<br>
 4. 쓰레기통 드론 AP연결<br>
