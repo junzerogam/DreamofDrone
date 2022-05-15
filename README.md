@@ -24,9 +24,17 @@
   - **GCS OS** - Ubuntu 18.04.5 on Windows
 
 - **Architecture**
+![Architecture](/docs/img/drone/architecture_basic.PNG)
+
+- **Progress**
+  - LTE Module 부착<br>
+  <p align="center">
+    <img src="/docs/img/drone/connect_LTE_Module.jpg">
+  </p>
 
 
 아키텍처<br>
+
 아키텍처 설명<br>
 결과물<br>
 향후 개발 방향
