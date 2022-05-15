@@ -52,10 +52,11 @@
 ***
 > ✔ **MAVProxy로 FC 통신하는 GCS 설정**
 <br>
-<img align="left" src="docs/img/drone/port_forwading.png">
-1. 5001 포트포워딩 설정<br><br>
-2. 드론은 5001 포트를 통해 GCS와 통신한다.<br><br>
-<br clear="left"/><br>
+<p align="center">
+  <img src="docs/img/drone/port_forwading.png">
+</p>
+<div align=center>1. 5001 포트포워딩 설정</div><br>
+<div align=center>2. 드론은 5001 포트를 통해 GCS와 통신한다.</div><br><br>
 
 ```
 pi@drone:~ $ sudo apt update
@@ -83,11 +84,11 @@ Port 5001
 ```
 <div align=center>Desktop GCS의 SSH 포트를 5001로 변경</div><br><br>
 
-<img align="left" src="docs/img/drone/second_portfowarding.png">
-<br>
-1. 2222 포트포워딩 설정<br><br>
-2. 2222 포트를 통해 Desktop GCS에 원격 접속<br><br>
-<br clear="left"/><br><br>
+<p align="center">
+  <img src="docs/img/drone/second_portfowarding.png">
+</p>
+<div align=center>1. 2222 포트포워딩 설정</div><br>
+<div align=center>2. 2222 포트를 통해 Desktop GCS에 원격 접속</div><br><br>
 
 ```
 pi@drone:~ $ ssh-keygen -t rsa
