@@ -24,10 +24,16 @@
   - **GCS OS** - Ubuntu 18.04.5 on Windows
 
 - **Architecture**
-![Architecture](/docs/img/drone/architecture_basic.PNG)
+<p align="center">
+  <img width="80%" height="80%" src="/docs/img/drone/drone_architecture.PNG">
+</p><br>
 
-- **Progress**
-<br>
+![Architecture](/docs/img/drone/architecture_basic_new.PNG)
+
+- **Progress**<br>
+
+> ✔ **LTE Module 부착** <br>
+
 <img align="left" width="350" height="250" src="/docs/img/drone/connect_LTE_Module.jpg">
 <br><br>
 1. LTE Module 및 안테나 연결<br><br>
@@ -36,7 +42,8 @@
 <br clear="left"/><br>
 
 ***
-<br>
+> ✔ **MAVProxy로 FC 통신하는 GCS 설정** <br>
+
 <img align="left" src="docs/img/drone/port_forwading.png">
 1. 5001 포트포워딩 설정<br><br>
 2. 드론은 5001 포트를 통해 GCS와 통신한다.<br><br>
@@ -51,19 +58,34 @@ pi@drone:~ $ sudo apt install screen python-wxgtk4.0 python-lxml
 ```
 pi@drone:~ $ mavproxy.py --master /dev/ttyACM0 --out [routerIP]:5001
 ```
+<p align="center">
+  <img src="docs/img/drone/MavProxy_GCS_UDP_Connect.gif">
+</p>
 
-<img align="center" src="docs/img/drone/MavProxy_GCS_UDP_Connect.gif">
+<div align=center>MAVProxy를 사용하여 5001포트로 연결한 후 원격으로 드론을 제어하는 모습</div>
+
+***
+> ✔ **Reverse SSH 원격 접속** <br>
+
+<p align="center">
+  <img width="80%" height="80%" src="docs/img/drone/sshkey_exchange.PNG">
+</p>
+
+<div align=center>인증된 자동 ssh 로그인을 위한 인증키 생성 및 교환</div><br>
+
+```
+pi@drone:~ $ sudo ssh -f -N -T -R 2222:localhost:22 uhyeong@[routerIP] -p 5001
+```
+```
+uhyeong@DESKTOP-R39GAN6:~$ ssh pi@localhost -p 2222
+```
+
+***
+> ✔ **드론 무선 AP에 스마트 쓰레기통 연결** <br>
 
 
+***
+> ✔ **드론과 스마트 쓰레기통 TCP 통신** <br>
 
 
-
-
-
-<br>
-아키텍처 과정 설명<br>
-3. reverse SSH 설정<br>
-4. 쓰레기통 드론 AP연결<br>
-5. TCP 통신<br>
-결과물 사진 or GIF<br>
-향후 개발 방향
+<br>향후 개발 방향..
