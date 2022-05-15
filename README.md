@@ -1,10 +1,19 @@
 # Smart Trash Can data collection system for Drone
-드론의 스마트 쓰레기통 데이터 수집 시스템
-팀명 : DoD
-팀원 : 조우형, 김준영, 박중후, 유예린
+드론의 스마트 쓰레기통 데이터 수집 시스템<br>
+- Team : DoD<br>
+- Contributors : 조우형, 김준영, 박중후, 유예린<br>
 
 ## 🗑 Smart Trash Can
-temp
+- **Spec**
+  - **Hardware** - Raspberry Pi 4 8GB
+  - **OS** - Raspbian OS
+  - **Sensor 1** - 초음파 센서 HC-SR04
+  - **Sensor 2** - 무게 센서 HX-711
+  - **Sensor 3** - 서보 모터 SG-90
+
+회로도<br>
+알고리즘 도표<br>
+작동 자료<br>
 
 ## 🚁 Drone
 - **Spec**
@@ -13,6 +22,9 @@ temp
   - **Server OS** - Linux-5.10.103 with debian-10.12
   - **LTE Module** - SixFab EG25-G (Global)
   - **GCS OS** - Ubuntu 18.04.5 on Windows
+
+- **Architecture**
+
 
 아키텍처<br>
 아키텍처 설명<br>
