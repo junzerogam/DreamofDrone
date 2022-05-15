@@ -27,14 +27,22 @@
 ![Architecture](/docs/img/drone/architecture_basic.PNG)
 
 - **Progress**
-  - LTE Module 부착<br>
-  <p align="center">
-    <img src="/docs/img/drone/connect_LTE_Module.jpg">
-  </p>
+<br>
+<img align="left" width="350" height="250" src="/docs/img/drone/connect_LTE_Module.jpg">
+1. LTE Module 및 안테나 연결<br><br>
+2. Sixfab 모듈 펌웨어 설치<br><br>
+3. eth0, wlan0 해제 후 셀룰러 모드 동작 확인<br><br>
+<br clear="left"/>
 
 
-아키텍처<br>
 
-아키텍처 설명<br>
-결과물<br>
+
+<br>
+아키텍처 과정 설명<br>
+1. 모듈 설치<br>
+2. MavProxy로 FC 통신<br>
+3. reverse SSH 설정<br>
+4. 쓰레기통 드론 AP연결<br>
+5. TCP 통신<br>
+결과물 사진 or GIF<br>
 향후 개발 방향
