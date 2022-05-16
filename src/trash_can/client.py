@@ -103,10 +103,10 @@ def checkweight(sample, count) :
 ##################################################
 
 # calculate trash_can to be changed or not
-def changeflag(weight, distance):
+def changeflag(weight, volume):
     change_flag = False
 
-    if distance <= 3.5 and weight >= 500 :
+    if volume >= 75 or weight >= 500 :
         change_flag = True
 
     return change_flag
@@ -165,10 +165,7 @@ while True:
     else :
         return_head()
 
-    flag = changeflag(trash_weight, trash_distance)
-
-    if flag == True :
-        print("Change Trash Can Please")
+    flag = changeflag(trash_weight, trash_volume)
 
     ##########################SEND DRONE###########################
     intTrashDistance = int(trash_distance)
@@ -192,4 +189,6 @@ while True:
     print("trash distance : %d cm" %(trash_distance))
     print("trash_volume : %d %%\n" %(trash_volume))
 
-    time.sleep(1)
+    if flag == True :
+        print("Change Trash Can Please")
+    time.sleep(3)
