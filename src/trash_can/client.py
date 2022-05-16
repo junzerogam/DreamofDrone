@@ -14,8 +14,8 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 # outside ultrasonic wave sensor i/o set bcm num
-trig_open = 2   # input
-echo_open = 3   # output
+trig_open = 27   # input
+echo_open = 22   # output
 
 GPIO.setup(trig_open, GPIO.OUT)
 GPIO.setup(echo_open, GPIO.IN)
