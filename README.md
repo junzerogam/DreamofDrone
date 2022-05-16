@@ -18,6 +18,10 @@
   - **Sensor 3** - 서보 모터 SG-90
 
 - **Schematic**
+<p align="center">
+  <img width="50%" height="50%" src="docs/img/trash_can/Layout_schemetic.jpg">
+</p>
+
 - **Progress**
 <br>
 회로도<br>
