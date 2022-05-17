@@ -161,12 +161,6 @@ while True:
     trash_distance = umpa_forTrash()
     trash_volume = checkVolume(trash_distance)
 
-    # under 7cm then open
-    if open_distance <= 7 :
-        move_head()
-        print("[Notice] : Open Head!")
-    else :
-        return_head()
 
     flag = changeflag(trash_weight, trash_volume)
 
@@ -177,17 +171,23 @@ while True:
     sendTrashDistance = str(intTrashDistance)
     sendTrashWeight = str(intTrashWeight)
     sendTrashVolume = str(intTrashVolume)
-    
+    sendFlag = str(flag)
+
+    print("-------------------------------------------")
+    print("Sending Data to Drone...")
+
     clientSock.send(sendTrashWeight.encode('utf-8'))
     nothing = clientSock.recv(1024)
     clientSock.send(sendTrashDistance.encode('utf-8'))
     nothing = clientSock.recv(1024)
     clientSock.send(sendTrashVolume.encode('utf-8'))
     nothing = clientSock.recv(1024)
+    clientSock.send(sendFlag.encode('utf-8'))
+    nothing = clientSock.recv(1024)
+    print("Completed!!\n")
     ################################################################
 
     # print terminal
-    print("---------------------")
     print("[Open Distance] : %d cm\n" %(open_distance))
     print("[Trash Weight]  : %d g" %(trash_weight))
     print("[Trash Distance]: %d cm" %(trash_distance))
@@ -197,5 +197,12 @@ while True:
         print("[Status]        : Need Changed\n")
     else :
         print("[Status]        : Normal\n")
+
+    # under 7cm then open
+    if open_distance <= 7 :
+        move_head()
+        print("[Notice] : Open Head!")
+    else :
+        return_head()
 
     time.sleep(3)
