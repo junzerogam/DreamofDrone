@@ -162,6 +162,7 @@ while True:
     # under 7cm then open
     if open_distance <= 7 :
         move_head()
+        print("[Notice] : Open Head!")
     else :
         return_head()
 
@@ -184,11 +185,15 @@ while True:
     ################################################################
 
     # print terminal
-    print("open distance : %d cm" %(open_distance))
-    print("trash_weight : %d g" %(trash_weight))
-    print("trash distance : %d cm" %(trash_distance))
-    print("trash_volume : %d %%\n" %(trash_volume))
-
+    print("---------------------")
+    print("[Open Distance] : %d cm\n" %(open_distance))
+    print("[Trash Weight]  : %d g" %(trash_weight))
+    print("[Trash Distance]: %d cm" %(trash_distance))
+    print("[Trash Volume]  : %d %%\n" %(trash_volume))
+    
     if flag == True :
-        print("Change Trash Can Please")
+        print("[Status]        : Need Changed\n")
+    else :
+        print("[Status]        : Normal\n")
+
     time.sleep(3)
