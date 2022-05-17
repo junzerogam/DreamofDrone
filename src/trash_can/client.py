@@ -69,7 +69,8 @@ SCK=20  # clock
 
 GPIO.setup(SCK, GPIO.OUT)
 
-######################will modify#####################
+# loadcell sensor operation
+# read DT value by generating a clock impulse(SCK)
 def readCount():
     i=0
     Count=0
@@ -96,11 +97,12 @@ def readCount():
     
     return Count
 
+# sample = initial value 
+# count = measured value
 def checkweight(sample, count) :
     weight = (count - sample) / 406
         
     return weight
-##################################################
 
 # calculate trash_can to be changed or not
 def changeflag(weight, volume):
