@@ -22,15 +22,24 @@ while 1:
 
     weightData = ""
     weightData = connectionSock.recv(1024)
-    print("weight = %s g" %(weightData.decode('utf-8')))
+    print("[Receive Trash Weight]   : %s g" %(weightData.decode('utf-8')))
     connectionSock.send(nothing.encode('utf-8'))
 
     distanceData = ""
     distanceData = connectionSock.recv(1024)
-    print("distance = %s cm" %(distanceData.decode('utf-8')))
+    print("[Receive Trash Distance] : %s cm" %(distanceData.decode('utf-8')))
     connectionSock.send(nothing.encode('utf-8'))
 
     volumePercentage = ""
     volumePercentage = connectionSock.recv(1024)
-    print("percentage = %s %%\n" %(volumePercentage.decode('utf-8')))
+    print("[Receive Trash Volume]   : %s %%\n" %(volumePercentage.decode('utf-8')))
     connectionSock.send(nothing.encode('utf-8'))
+
+    flagData = ""
+    flagData = connectionSock.recv(1024)
+    if(flagData == "True") :
+        print("[Receive Status]         : Need Changed")
+    else :
+        print("[Receive Status]         : Normal")
+    connectionSock.send(nothing.encode('utf-8'))
+    print("------------------------------------------------------------")
