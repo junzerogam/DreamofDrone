@@ -1,7 +1,7 @@
 # Smart Trash Can data collection system for Drone
 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
 - **Team** : DoD<br>
-- **Contributors** : 조우형, 김준영, 박중후, 유예린<br>
+- **Contributors** : 조우형(@UhyeongJo), 김준영(@junzerogam), 박중후(@joong-park), 유예린(@yl-zzzz)<br>
 ## 💡 Summary
 >요즘 코로나로 인한 일회용품 사용이 많아지는 등 쓰레기 배출이 많아지고, 쓰레기통이 넘칠 때까지 쓰레기를 버려 쓰레기통 주변이 더러워지는 사례가 많이 발생한다.<br><br>
 >이에 따라, 자주 쓰레기통을 비워야 하는 어려움이 있다.<br><br>
