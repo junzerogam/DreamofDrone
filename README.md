@@ -30,7 +30,7 @@
   <img width=320 height=350 src="docs/img/trash_can/openhead.gif">
 </p>
 <br><br>
-<img align="left" width="30%" height="50%" src="docs/img/trash_can/how_open.jpg">  
+<img align="left" width="35%" height="50%" src="docs/img/trash_can/how_open.jpg">  
 <br><br>
 1. 뚜껑<br><br>
 2. 뚜껑<br><br>
@@ -41,7 +41,7 @@
 <p align="center">
   <img width="36.5%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="54.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
 </p><br>
-<img align="left" width="50%" height="40%" src="docs/img/trash_can/puttrash_result.jpg">
+<img align="left" width="60%" height="60%" src="docs/img/trash_can/puttrash_result.jpg">
 <br><br>
 1. 부피<br><br>
 2. 부피<br><br>
