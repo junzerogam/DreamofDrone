@@ -28,6 +28,12 @@
   <img width=430 height=400 src="docs/img/trash_can/Layout_opentrash.jpg"><img width=350 height=350 src="docs/img/trash_can/openhead.gif">
 </p>
 
+<p align="center">
+  <img width="30%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="44.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
+</p>
+
+
+
 - [ ] 알고리즘 도표<br>
 - [ ] 작동 자료<br>
 
