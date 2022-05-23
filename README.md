@@ -37,14 +37,17 @@
 <br><br>
 
 > ✔ **쓰레기 양 체크 및 무게 측정**
-<p align="center">
+<p align="left">
   <img width="36.5%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="54.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
-</p>
+</p><br>
 
+<img align="left" width="36.5%" height="40%" src="docs/img/trash_can/puttrash.jpg">
 
-
-- [ ] 알고리즘 도표<br>
-- [ ] 작동 자료<br>
+<br><br>
+1. 부피<br><br>
+2. 부피<br><br>
+3. 무게<br><br>
+<br clear="left"/><br>
 
 ## 🚁 Drone
 - **Spec**
