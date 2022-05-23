@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  <img width="30%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="44.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
+  <img width="36.5%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="54.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
 </p>
 
 
