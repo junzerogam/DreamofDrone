@@ -40,8 +40,7 @@
 <p align="left">
   <img width="36.5%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="54.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
 </p><br>
-
-<img align="left" width="36.5%" height="40%" src="docs/img/trash_can/puttrash.jpg">
+<img align="left" width="30%" height="10%" src="docs/img/trash_can/puttrash.jpg"><img width="30%" height="15%" src="docs/img/trash_can/status_result.jpg">
 
 <br><br>
 1. 부피<br><br>
