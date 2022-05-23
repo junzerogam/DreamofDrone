@@ -27,20 +27,20 @@
 <br>
 <p align="center">
   <img width=380 height=380 src="docs/img/trash_can/Layout_opentrash.jpg">
-  <img width=200 height=350 src="docs/img/trash_can/how_open.jpg">
   <img width=220 height=350 src="docs/img/trash_can/openhead.gif">
 </p>
 <br><br>
+<img aling="left" width="40%" height="40%" src="docs/img/trash_can/how_open.jpg">
 1. 쓰레기통<br> 
 2. 쓰레기통<br>  
 3. 쓰레기통<br>
-<br><br>
+<br clear="left"/><br>
 
 > ✔ **쓰레기 양 체크 및 무게 측정**
 <p align="left">
   <img width="36.5%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="54.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
 </p><br>
-<img align="left" width="70%" height="65%" src="docs/img/trash_can/puttrash_result.jpg">
+<img align="left" width="30%" height="30%" src="docs/img/trash_can/puttrash_result.jpg">
 
 <br><br>
 1. 부피<br><br>
