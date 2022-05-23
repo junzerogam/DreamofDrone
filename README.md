@@ -59,7 +59,7 @@
 
 - **Architecture**
 <p align="center">
-  <img width="70%" height="70%" src="/docs/img/drone/drone_architecture.PNG">
+  <img width="70%" height="70%" src="docs/img/drone/architecture_drone.PNG">
 </p><br>
 
 ![Architecture](/docs/img/drone/architecture_basic_new.PNG)
