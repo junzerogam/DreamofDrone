@@ -37,7 +37,7 @@ while 1:
 
     flagData = ""
     flagData = connectionSock.recv(1024)
-    if(flagData == "True") :
+    if(flagData.decode('utf-8') == "True") :
         print("[Receive Status]         : Need Changed")
     else :
         print("[Receive Status]         : Normal")
