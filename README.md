@@ -97,7 +97,7 @@ pi@drone:~ $ ssh-keygen -t rsa
 uhyeong@DESKTOP-R39GAN6:~$ ssh-keygen -t rsa
 ```
 <p align="center">
-  <img width="80%" height="80%" src="docs/img/drone/sshkey_exchange.PNG">
+  <img width="70%" height="70%" src="docs/img/drone/sshkey_exchange.PNG">
 </p>
 
 <div align=center>인증된 자동 ssh 로그인을 위한 인증키 생성 및 교환</div><br><br>
@@ -109,8 +109,9 @@ pi@drone:~ $ sudo ssh -f -N -T -R 2222:localhost:22 uhyeong@[routerIP] -p 5001
 uhyeong@DESKTOP-R39GAN6:~$ ssh pi@localhost -p 2222
 ```
 
-<br>
-- 그림<br>
+<p align="center">
+  <img width="70%" height="70%" src="docs/img/drone/reverseSSH_architecture.png">
+</p>
 
 <div align=center>터널링 후 Reverse SSH 원격 접속</div><br>
 
