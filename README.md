@@ -53,6 +53,7 @@
   - **FC** - AutoPilot Pixhawk 4
   - **Server** - Raspberry Pi 3 B+
   - **Server OS** - Linux-5.10.103 with debian-10.12
+  - **Wireless AP SW Package** - Ardupilot APSync
   - **LTE Module** - SixFab EG25-G (Global)
   - **GCS OS** - Ubuntu 18.04.5 on Windows
 
