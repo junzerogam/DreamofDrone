@@ -25,8 +25,7 @@
 - **Progress**
 <br>
 <p align="center">
-  <img width="40%" height="40%" src="docs/img/trash_can/Layout_opentrash.jpg">
-  <img width="60%" height="60%" src="docs/img/trash_can/openhead.gif">
+  <img width=410 height=450 src="docs/img/trash_can/Layout_opentrash.jpg"><img width="70%" height="60%" src="docs/img/trash_can/openhead.gif">
 </p>
 
 - [ ] 알고리즘 도표<br>
