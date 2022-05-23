@@ -23,11 +23,20 @@
 </p>
 
 - **Progress**
+> ✔ **뚜껑 제작**
 <br>
 <p align="center">
-  <img width=430 height=400 src="docs/img/trash_can/Layout_opentrash.jpg"><img width=350 height=350 src="docs/img/trash_can/openhead.gif">
+  <img width=380 height=380 src="docs/img/trash_can/Layout_opentrash.jpg">
+  <img width=330 height=350 src="docs/img/trash_can/how_open.jpg">
+  <img width=290 height=350 src="docs/img/trash_can/openhead.gif">
 </p>
+<br><br>
+1. 쓰레기통<br> 
+2. 쓰레기통<br>  
+3. 쓰레기통<br>
+<br><br>
 
+> ✔ **쓰레기 양 체크 및 무게 측정**
 <p align="center">
   <img width="36.5%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="54.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
 </p>
