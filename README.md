@@ -28,7 +28,7 @@
 <p align="center">
   <img width=380 height=380 src="docs/img/trash_can/Layout_opentrash.jpg">
   <img width=200 height=350 src="docs/img/trash_can/how_open.jpg">
-  <img width=200 height=350 src="docs/img/trash_can/openhead.gif">
+  <img width=220 height=350 src="docs/img/trash_can/openhead.gif">
 </p>
 <br><br>
 1. 쓰레기통<br> 
