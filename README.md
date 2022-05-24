@@ -11,8 +11,8 @@ LTE 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
 
 ## 🗑 Smart Trash Can
 - **Spec**
-  - **Hardware** - Raspberry Pi 4 8GB
-  - **OS** - Raspbian OS
+  - **Client Hardware** - Raspberry Pi 4 8GB
+  - **Client OS** - Raspbian OS
   - **Sensor 1** - 초음파 센서 HC-SR04 x 2
   - **Sensor 2** - 무게 센서 HX-711
   - **Sensor 3** - 서보 모터 SG-90
