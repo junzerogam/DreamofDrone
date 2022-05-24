@@ -1,22 +1,26 @@
 import RPi.GPIO as GPIO
 import time
-#from socket import *
+from socket import *
 
 #####################USE SOCKET########################
-#port = 9000
-#clientSock = socket(AF_INET,SOCK_STREAM)
-#clientSock.connect(('10.0.1.128',port))
+port = 9000
+clientSock = socket(AF_INET,SOCK_STREAM)
+clientSock.connect(('10.0.1.128',port))
 #######################################################
 
+# remove warning info
 GPIO.setwarnings(False)
+# mapping gpio pin num to bcm num
 GPIO.setmode(GPIO.BCM)
 
-trig_open = 2
-echo_open = 3
+# outside ultrasonic wave sensor i/o set bcm num
+trig_open = 27   # input
+echo_open = 22   # output
 
 GPIO.setup(trig_open, GPIO.OUT)
 GPIO.setup(echo_open, GPIO.IN)
 
+# open trashcan func
 def umpa_forOpen() :
     GPIO.output(trig_open, GPIO.LOW)
     time.sleep(0.0001)
@@ -34,12 +38,14 @@ def umpa_forOpen() :
 
     return open_distance
 
+# inside ultrasonic wave sensor i/o set bcm num
 trig_trash = 23
 echo_trash = 24
 
 GPIO.setup(trig_trash, GPIO.OUT)
 GPIO.setup(echo_trash, GPIO.IN)
 
+# measure the height of garbage func
 def umpa_forTrash() :
     GPIO.output(trig_trash, GPIO.LOW)
     time.sleep(0.0001)
@@ -57,11 +63,14 @@ def umpa_forTrash() :
 
     return trash_distance
 
-DT =21
-SCK=20
+# weight sensor i/o set bcm num
+DT =21  # data
+SCK=20  # clock
 
 GPIO.setup(SCK, GPIO.OUT)
 
+# loadcell sensor operation
+# read DT value by generating a clock impulse(SCK)
 def readCount():
     i=0
     Count=0
@@ -88,19 +97,40 @@ def readCount():
     
     return Count
 
+# sample = initial value 
+# count = measured value
 def checkweight(sample, count) :
     weight = (count - sample) / 406
         
     return weight
 
-def changeflag(weight, distance):
+# calculate trash_can to be changed or not
+def changeflag(weight, volume):
     change_flag = False
 
-    if distance <= 3.5 and weight >= 500 :
+    if volume >= 75 or weight >= 500 :
         change_flag = True
 
     return change_flag
 
+# servo motor sensor i/o set bcm num
+SERVO = 15
+GPIO.setup(SERVO,GPIO.OUT)
+
+# make servo can move
+SERVO_PWM = GPIO.PWM(SERVO,50)
+SERVO_PWM.start(0)
+
+# open trash_can
+def move_head() :
+    SERVO_PWM.ChangeDutyCycle(7.5)  # servo degree(90)
+    time.sleep(2)
+
+# close trash_can
+def return_head() :
+    SERVO_PWM.ChangeDutyCycle(0.1)  # servo degree(origin)
+
+# calculate distance to percent
 def checkVolume(distance) :
     standard = 19
 
@@ -113,65 +143,66 @@ def checkVolume(distance) :
         percentage = 0
 
     return percentage
-        
-SERVO = 15
-GPIO.setup(SERVO,GPIO.OUT)
 
-SERVO_PWM = GPIO.PWM(SERVO,50)
-SERVO_PWM.start(0)
-
-def move_head() :
-    SERVO_PWM.ChangeDutyCycle(7.5)
-    time.sleep(2)
-
-def return_head() :
-    SERVO_PWM.ChangeDutyCycle(0.1)
-
-"""---------MAIN---------"""
+#########################--MAIN--##################################
 
 print("Ready to Check weight and distance")
-for i in range (3,0, -1):
+for i in range (3,0,-1):
     print(i)
     time.sleep(1)
 print("Start Check Data")
-sample = readCount()
+sample = readCount()    # read weight sensor initial data
 
 while True:
     count = readCount()
-    weight = 0
-    weight = checkweight(sample, count)
+    trash_weight = 0
+    trash_weight = checkweight(sample, count)
     open_distance = umpa_forOpen()
     trash_distance = umpa_forTrash()
     trash_volume = checkVolume(trash_distance)
 
+
+    flag = changeflag(trash_weight, trash_volume)
+
+    ##########################SEND DRONE###########################
+    intTrashDistance = int(trash_distance)
+    intTrashWeight = int(trash_weight)
+    intTrashVolume = int(trash_volume)
+    sendTrashDistance = str(intTrashDistance)
+    sendTrashWeight = str(intTrashWeight)
+    sendTrashVolume = str(intTrashVolume)
+    sendFlag = str(flag)
+
+    print("-------------------------------------------")
+    print("Sending Data to Drone...")
+
+    clientSock.send(sendTrashWeight.encode('utf-8'))
+    nothing = clientSock.recv(1024)
+    clientSock.send(sendTrashDistance.encode('utf-8'))
+    nothing = clientSock.recv(1024)
+    clientSock.send(sendTrashVolume.encode('utf-8'))
+    nothing = clientSock.recv(1024)
+    clientSock.send(sendFlag.encode('utf-8'))
+    nothing = clientSock.recv(1024)
+    print("Completed!!\n")
+    ################################################################
+
+    # print terminal
+    print("[Open Distance] : %d cm\n" %(open_distance))
+    print("[Trash Weight]  : %d g" %(trash_weight))
+    print("[Trash Distance]: %d cm" %(trash_distance))
+    print("[Trash Volume]  : %d %%\n" %(trash_volume))
+    
+    if flag == True :
+        print("[Status]        : Need Changed\n")
+    else :
+        print("[Status]        : Normal\n")
+
+    # under 7cm then open
     if open_distance <= 7 :
         move_head()
+        print("[Notice] : Open Head!")
     else :
         return_head()
 
-    flag = changeflag(weight, trash_distance)
-
-    if flag == True :
-        print("Change Trash Can Please")
-
-    ################SEND DRONE############################
-    #strdistance = str(distance)
-    #strweight = str(weight)
-    #sendDistanceData = strdistance
-    #sendWeightData= strweight
-    #clientSock.send(sendDistanceData.encode('utf-8'))
-
-    #print("distance = ",sendDistanceData.encode('utf-8'))
-    #time.sleep(1)
-    #clientSock.send(sendWeightData.encode('utf-8'))
-    #print("weight = ",weight)
-    #time.sleep(1)
-    ######################################################
-
-    print("open distance : %d cm" %(open_distance))
-    print("trash distance : %d cm" %(trash_distance))
-    print("%d g" %(weight))
-    print("trash_volume : %d %" %(trash_volume))
-
-    time.sleep(1)
-
+    time.sleep(3)
