@@ -108,7 +108,7 @@ def checkweight(sample, count) :
 def changeflag(weight, volume):
     change_flag = False
 
-    if volume >= 75 or weight >= 500 :
+    if volume >= 60 or weight >= 500 :
         change_flag = True
 
     return change_flag
