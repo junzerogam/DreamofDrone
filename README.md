@@ -46,13 +46,13 @@ LTE 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
 </p><br>
 <img align="left" width="68%" height="75%" src="docs/img/trash_can/puttrash_result.jpg">
 
-📝 Procedure <br><br>
+📝 Procedure <br>
 1. 무게와 쓰레기통 내부 거리 측정<br>
 > 무게 : 무게센서 활용<br>
 > 거리 : 쓰레기통 내부 초음파 센서 활용<br>
 2. 무게가 500g 이상일 경우
 > [Status] : Need change를 출력<br>
-3. 쓰레기 양의 정도가 60% 이상일 경우<br>
+3. 쓰레기 찬 정도가 60% 이상일 경우<br>
 > [Status] : Need change를 출력<br>
 <br clear="left"/><br>
 
