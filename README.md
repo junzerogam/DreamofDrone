@@ -23,7 +23,6 @@ LTE 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
 </p>
 
 - **Progress**
-> ✔ **뚜껑 제작**
 <br>
 <p align="center">
   <img width=420 height=380 src="docs/img/trash_can/Layout_opentrash.jpg">
@@ -32,9 +31,13 @@ LTE 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
 <br><br>
 <img align="left" width="35%" height="50%" src="docs/img/trash_can/how_open.jpg">  
 <br><br>
-1. 뚜껑<br><br>
-2. 뚜껑<br><br>
-3. 뚜껑<br><br>
+📝 Procedure <br><br>
+1. 외부 초음파 센서로 측정된 거리값이 7cm 이하이면 뚜껑이 열림.<br><br>
+> 서보모터가 뚜껑에 연결된 낚시줄을 잡아 당겨(PULL) 뚜껑이 열림.<br><br>
+<br>
+2. 외부 초음파 센서로 측정된 거리값이 7cm 초과이면 뚜껑이 닫힌 상태로 유지.<br><br>
+> 서보모터가 뚜껑에 연결된 낚시줄을 잡아 당기지 않고(PUSH) 팽팽한 상태로 유지.<br><br>
+> 뚜껑이 열렸다가 닫힐 시 쉽게 닫히게 하기 위해 뚜껑에 무게감있는 물체 설치.<br><br>
 <br clear="left"/><br>
 
 > ✔ **쓰레기 양 체크 및 무게 측정**
