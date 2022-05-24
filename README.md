@@ -1,5 +1,5 @@
-# Smart Trash Can data collection system for Drone
-드론의 스마트 쓰레기통 데이터 수집 시스템<br>
+# Smart Trash Can data collection system for LTE Drone
+LTE 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
 - **Team** : DoD<br>
 - **Contributors** : 조우형, 김준영, 박중후, 유예린<br>
 ## 💡 Summary
