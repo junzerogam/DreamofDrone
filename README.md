@@ -41,7 +41,7 @@ LTE 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
 <p align="center">
   <img width="36.5%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="54.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
 </p><br>
-<img align="left" width="60%" height="75%" src="docs/img/trash_can/puttrash_result.jpg">
+<img align="left" width="68%" height="75%" src="docs/img/trash_can/puttrash_result.jpg">
 <br><br>
 1. 부피<br><br>
 2. 부피<br><br>
