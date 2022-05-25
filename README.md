@@ -133,6 +133,8 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
 
 <div align=center>부팅시 자동 터널링 및 라우팅 테이블 갱신</div><br>
 
+💥 [Trouble Shooting](https://brawny-dingo-fe3.notion.site/reverse-SSH-190c3558907c421b8cd49211976d2777)
+
 ***
 > ✔ **드론 무선 AP에 스마트 쓰레기통 연결**
 <br>
