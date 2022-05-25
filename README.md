@@ -149,6 +149,8 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
   <img src="docs/img/drone/connect_to_droneAP.PNG">
 </p>
 
+<div align=center>스마트 쓰레기통이 드론 무선 AP에 연결한 모습</div>
+
 ***
 > ✔ **드론과 스마트 쓰레기통 TCP 통신**
 <br>
