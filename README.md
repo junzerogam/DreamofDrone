@@ -1,5 +1,5 @@
-# Smart Trash Can data collection system for Drone
-드론의 스마트 쓰레기통 데이터 수집 시스템<br>
+# Smart Trash Can data collection system for LTE Drone
+LTE 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
 - **Team** : DoD<br>
 - **Contributors** : 조우형, 김준영, 박중후, 유예린<br>
 ## 💡 Summary
@@ -11,8 +11,8 @@
 
 ## 🗑 Smart Trash Can
 - **Spec**
-  - **Hardware** - Raspberry Pi 4 8GB
-  - **OS** - Raspbian OS
+  - **Client Hardware** - Raspberry Pi 4 8GB
+  - **Client OS** - Raspbian OS
   - **Sensor 1** - 초음파 센서 HC-SR04 x 2
   - **Sensor 2** - 무게 센서 HX-711
   - **Sensor 3** - 서보 모터 SG-90
@@ -23,7 +23,6 @@
 </p>
 
 - **Progress**
-> ✔ **뚜껑 제작**
 <br>
 <p align="center">
   <img width=420 height=380 src="docs/img/trash_can/Layout_opentrash.jpg">
@@ -32,20 +31,29 @@
 <br><br>
 <img align="left" width="35%" height="50%" src="docs/img/trash_can/how_open.jpg">  
 <br><br>
-1. 뚜껑<br><br>
-2. 뚜껑<br><br>
-3. 뚜껑<br><br>
+📝 Procedure <br><br>
+1. 외부 초음파 센서로 측정된 거리값이 7cm 이하이면 뚜껑이 열림<br><br>
+> 서보모터가 뚜껑에 연결된 낚시줄을 잡아 당겨(PULL) 뚜껑이 열림<br><br>
+<br>
+2. 외부 초음파 센서로 측정된 거리값이 7cm 초과이면 뚜껑이 닫힘<br><br>
+> 서보모터가 뚜껑에 연결된 낚시줄이 팽팽한 상태(PUSH) 유지<br><br>
+> 뚜껑이 열렸다가 닫힐 시 쉽게 닫히게 하기 위해 무게감있는 물체 설치<br><br>
 <br clear="left"/><br>
 
 > ✔ **쓰레기 양 체크 및 무게 측정**
 <p align="center">
   <img width="36.5%" height="40%" src="docs/img/trash_can/Layout_Inside.PNG"><img width="54.5%" height="40%" src="docs/img/trash_can/Layout_Function_Operation.PNG">
 </p><br>
-<img align="left" width="60%" height="75%" src="docs/img/trash_can/puttrash_result.jpg">
-<br><br>
-1. 부피<br><br>
-2. 부피<br><br>
-3. 부피<br><br>
+<img align="left" width="68%" height="75%" src="docs/img/trash_can/puttrash_result.jpg">
+
+📝 Procedure <br>
+1. 무게와 쓰레기통 내부 거리 측정<br>
+> 무게 : 무게센서 활용<br>
+> 거리 : 쓰레기통 내부 초음파 센서 활용<br>
+2. 무게가 500g 이상일 경우
+> [Status] : Need change를 출력<br>
+3. 쓰레기 찬 정도가 60% 이상일 경우<br>
+> [Status] : Need change를 출력<br>
 <br clear="left"/><br>
 
 ## 🚁 Drone
@@ -91,6 +99,10 @@ pi@drone:~ $ mavproxy.py --master /dev/ttyACM0 --out [routerIP]:5001
 > ✔ **Reverse SSH 원격 접속**
 <br>
 
+💥 [Trouble Shooting](https://brawny-dingo-fe3.notion.site/reverse-SSH-190c3558907c421b8cd49211976d2777)
+
+<br>
+
 ```
 pi@drone:~ $ ssh-keygen -t rsa
 ```
@@ -103,6 +115,10 @@ uhyeong@DESKTOP-R39GAN6:~$ ssh-keygen -t rsa
 
 <div align=center>인증된 자동 ssh 로그인을 위한 인증키 생성 및 교환</div><br><br>
 
+<p align="center">
+  <img width="70%" height="70%" src="docs/img/drone/reverseSSH_architecture.png">
+</p>
+
 ```
 pi@drone:~ $ sudo ssh -f -N -T -R 2222:localhost:22 uhyeong@[routerIP] -p 5001
 ```
@@ -111,7 +127,7 @@ uhyeong@DESKTOP-R39GAN6:~$ ssh pi@localhost -p 2222
 ```
 
 <p align="center">
-  <img width="70%" height="70%" src="docs/img/drone/reverseSSH_architecture.png">
+  <img src="docs/img/drone/remote_to_drone.png">
 </p>
 
 <div align=center>터널링 후 Reverse SSH 원격 접속</div><br>
@@ -123,15 +139,23 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
 @reboot sleep 30 && /home/pi/drone/reverse_ssh/setIpTable.sh
 ```
 
-<div align=center>부팅시 자동 터널링 및 라우팅 테이블 갱신</div><br>
+<div align=center>부팅시 동적 할당 받은 IP 정보로 자동 터널링 및 라우팅 테이블 갱신</div><br>
 
 ***
 > ✔ **드론 무선 AP에 스마트 쓰레기통 연결**
 <br>
+
+<p align="center">
+  <img src="docs/img/drone/connect_to_droneAP.PNG">
+</p>
+
+<div align=center>스마트 쓰레기통이 드론 무선 AP에 연결한 모습</div>
 
 ***
 > ✔ **드론과 스마트 쓰레기통 TCP 통신**
 <br>
 
 ## 📌 Next
-향후 개발 방향..
+> * 드론이 수신한 스마트 쓰레기통의 데이터 값을 웹 또는 어플리케이션으로 구현 <br>
+> * 스마트 쓰레기통에 GPS 센서를 부착하여 지도 상에 여러 스마트 쓰레기통의 상태 표시 <br>
+> * 드론에 자율 비행을 구현하여 스마트 쓰레기통의 GPS 데이터를 이용하여 위치에 도달

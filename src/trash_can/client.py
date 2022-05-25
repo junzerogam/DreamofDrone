@@ -108,7 +108,7 @@ def checkweight(sample, count) :
 def changeflag(weight, volume):
     change_flag = False
 
-    if volume >= 75 or weight >= 500 :
+    if volume >= 60 or weight >= 500 :
         change_flag = True
 
     return change_flag
@@ -202,6 +202,7 @@ while True:
     if open_distance <= 7 :
         move_head()
         print("[Notice] : Open Head!")
+        time.sleep(2)
     else :
         return_head()
 
