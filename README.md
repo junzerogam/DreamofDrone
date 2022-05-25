@@ -146,7 +146,7 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
 <br>
 
 <p align="center">
-  <img src="docs/img/drone/connect_droneAP.PNG">
+  <img src="docs/img/drone/connect_to_droneAP.PNG">
 </p>
 
 ***
