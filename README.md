@@ -154,6 +154,22 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
 ***
 > ✔ **드론과 스마트 쓰레기통 TCP 통신**
 <br>
+<p align="center">
+  <img width=30% height=30% src="docs/img/final/drone_away.jpg">
+  <img width=30% height=30% src="docs/img/final/put_trash.jpg">
+  <img width=30% height=30% src="docs/img/final/gcs.jpg">
+</p>
+
+<div align=center>무선 상태의 드론 (왼쪽) / 스마트 쓰레기통 데이터 측정 (가운데) / GCS에서 드론에 원격 접속 및 데이터 수신 (오른쪽)</div>
+
+<br>
+
+<p align="center">
+  <img src="docs/img/drone/server_data.png">
+  <img width=35% height=35% src="docs/img/drone/client_data.jpg">
+</p>
+
+<div align=center>server.py (왼쪽) / client.py (오른쪽) / TCP 통신으로 데이터 송수신 구현</div>
 
 ## 📌 Next
 > * 드론이 수신한 스마트 쓰레기통의 데이터 값을 웹 또는 어플리케이션으로 구현 <br>
