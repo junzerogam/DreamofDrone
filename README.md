@@ -99,6 +99,10 @@ pi@drone:~ $ mavproxy.py --master /dev/ttyACM0 --out [routerIP]:5001
 > ✔ **Reverse SSH 원격 접속**
 <br>
 
+💥 [Trouble Shooting](https://brawny-dingo-fe3.notion.site/reverse-SSH-190c3558907c421b8cd49211976d2777)
+
+<br>
+
 ```
 pi@drone:~ $ ssh-keygen -t rsa
 ```
@@ -111,6 +115,10 @@ uhyeong@DESKTOP-R39GAN6:~$ ssh-keygen -t rsa
 
 <div align=center>인증된 자동 ssh 로그인을 위한 인증키 생성 및 교환</div><br><br>
 
+<p align="center">
+  <img width="70%" height="70%" src="docs/img/drone/reverseSSH_architecture.png">
+</p>
+
 ```
 pi@drone:~ $ sudo ssh -f -N -T -R 2222:localhost:22 uhyeong@[routerIP] -p 5001
 ```
@@ -119,7 +127,7 @@ uhyeong@DESKTOP-R39GAN6:~$ ssh pi@localhost -p 2222
 ```
 
 <p align="center">
-  <img width="70%" height="70%" src="docs/img/drone/reverseSSH_architecture.png">
+  <img src="docs/img/drone/remote_to_drone.png">
 </p>
 
 <div align=center>터널링 후 Reverse SSH 원격 접속</div><br>
@@ -131,14 +139,14 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
 @reboot sleep 30 && /home/pi/drone/reverse_ssh/setIpTable.sh
 ```
 
-<div align=center>부팅시 자동 터널링 및 라우팅 테이블 갱신</div><br>
-
-💥 [Trouble Shooting](https://brawny-dingo-fe3.notion.site/reverse-SSH-190c3558907c421b8cd49211976d2777)
+<div align=center>부팅시 동적 할당 받은 IP 정보로 자동 터널링 및 라우팅 테이블 갱신</div><br>
 
 ***
 > ✔ **드론 무선 AP에 스마트 쓰레기통 연결**
 <br>
-
+<p align="center">
+  <img src="docs/img/drone/connect_droneAP.PNG">
+</p>
 ***
 > ✔ **드론과 스마트 쓰레기통 TCP 통신**
 <br>
