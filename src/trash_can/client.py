@@ -202,6 +202,7 @@ while True:
     if open_distance <= 7 :
         move_head()
         print("[Notice] : Open Head!")
+        time.sleep(2)
     else :
         return_head()
 
