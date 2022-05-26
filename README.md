@@ -122,7 +122,7 @@ uhyeong@DESKTOP-R39GAN6:~$ ssh-keygen -t rsa
 <div align=center>인증된 자동 ssh 로그인을 위한 인증키 생성 및 교환</div><br><br>
 
 <p align="center">
-  <img width="70%" height="70%" src="docs/img/drone/reverseSSH_architectuㄱe.png">
+  <img width="70%" height="70%" src="docs/img/drone/reverseSSH_architecture.png">
 </p>
 
 ```
