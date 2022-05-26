@@ -1,0 +1,52 @@
+src/mavlink-router/pollable.o: src/mavlink-router/pollable.cpp \
+ /usr/include/stdc-predef.h config.h src/mavlink-router/pollable.h \
+ /usr/include/unistd.h /usr/include/features.h \
+ /usr/include/arm-linux-gnueabihf/sys/cdefs.h \
+ /usr/include/arm-linux-gnueabihf/bits/wordsize.h \
+ /usr/include/arm-linux-gnueabihf/bits/long-double.h \
+ /usr/include/arm-linux-gnueabihf/gnu/stubs.h \
+ /usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h \
+ /usr/include/arm-linux-gnueabihf/bits/posix_opt.h \
+ /usr/include/arm-linux-gnueabihf/bits/environments.h \
+ /usr/include/arm-linux-gnueabihf/bits/types.h \
+ /usr/include/arm-linux-gnueabihf/bits/typesizes.h \
+ /usr/lib/gcc/arm-linux-gnueabihf/8/include/stddef.h \
+ /usr/include/arm-linux-gnueabihf/bits/confname.h \
+ /usr/include/arm-linux-gnueabihf/bits/getopt_posix.h \
+ /usr/include/arm-linux-gnueabihf/bits/getopt_core.h
+
+/usr/include/stdc-predef.h:
+
+config.h:
+
+src/mavlink-router/pollable.h:
+
+/usr/include/unistd.h:
+
+/usr/include/features.h:
+
+/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
+
+/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
+
+/usr/include/arm-linux-gnueabihf/bits/long-double.h:
+
+/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
+
+/usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h:
+
+/usr/include/arm-linux-gnueabihf/bits/posix_opt.h:
+
+/usr/include/arm-linux-gnueabihf/bits/environments.h:
+
+/usr/include/arm-linux-gnueabihf/bits/types.h:
+
+/usr/include/arm-linux-gnueabihf/bits/typesizes.h:
+
+/usr/lib/gcc/arm-linux-gnueabihf/8/include/stddef.h:
+
+/usr/include/arm-linux-gnueabihf/bits/confname.h:
+
+/usr/include/arm-linux-gnueabihf/bits/getopt_posix.h:
+
+/usr/include/arm-linux-gnueabihf/bits/getopt_core.h:

@@ -1,0 +1,37 @@
+[
+  {
+    "directory": "/home/pi/APStreamline/build",
+    "command": "c++ -Istream_server@exe -I. -I.. -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -pthread -Werror -MD -MQ 'stream_server@exe/src_RTSPStreamServer_stream_server.cpp.o' -MF 'stream_server@exe/src_RTSPStreamServer_stream_server.cpp.o.d' -o 'stream_server@exe/src_RTSPStreamServer_stream_server.cpp.o' -c ../src/RTSPStreamServer/stream_server.cpp",
+    "file": "../src/RTSPStreamServer/stream_server.cpp"
+  },
+  {
+    "directory": "/home/pi/APStreamline/build",
+    "command": "c++ -Istream_server@exe -I. -I.. -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -pthread -Werror -MD -MQ 'stream_server@exe/src_RTSPStreamServer_IPCMessageHandler.cpp.o' -MF 'stream_server@exe/src_RTSPStreamServer_IPCMessageHandler.cpp.o.d' -o 'stream_server@exe/src_RTSPStreamServer_IPCMessageHandler.cpp.o' -c ../src/RTSPStreamServer/IPCMessageHandler.cpp",
+    "file": "../src/RTSPStreamServer/IPCMessageHandler.cpp"
+  },
+  {
+    "directory": "/home/pi/APStreamline/build",
+    "command": "c++ -Istream_server@exe -I. -I.. -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -pthread -Werror -MD -MQ 'stream_server@exe/src_RTSPStreamServer_RTSPAdaptiveStreaming.cpp.o' -MF 'stream_server@exe/src_RTSPStreamServer_RTSPAdaptiveStreaming.cpp.o.d' -o 'stream_server@exe/src_RTSPStreamServer_RTSPAdaptiveStreaming.cpp.o' -c ../src/RTSPStreamServer/RTSPAdaptiveStreaming.cpp",
+    "file": "../src/RTSPStreamServer/RTSPAdaptiveStreaming.cpp"
+  },
+  {
+    "directory": "/home/pi/APStreamline/build",
+    "command": "c++ -Istream_server@exe -I. -I.. -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -pthread -Werror -MD -MQ 'stream_server@exe/src_RTSPStreamServer_RTSPStreamServer.cpp.o' -MF 'stream_server@exe/src_RTSPStreamServer_RTSPStreamServer.cpp.o.d' -o 'stream_server@exe/src_RTSPStreamServer_RTSPStreamServer.cpp.o' -c ../src/RTSPStreamServer/RTSPStreamServer.cpp",
+    "file": "../src/RTSPStreamServer/RTSPStreamServer.cpp"
+  },
+  {
+    "directory": "/home/pi/APStreamline/build",
+    "command": "c++ -Istream_server@exe -I. -I.. -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -pthread -Werror -MD -MQ 'stream_server@exe/src_Common_PipelineManager.cpp.o' -MF 'stream_server@exe/src_Common_PipelineManager.cpp.o.d' -o 'stream_server@exe/src_Common_PipelineManager.cpp.o' -c ../src/Common/PipelineManager.cpp",
+    "file": "../src/Common/PipelineManager.cpp"
+  },
+  {
+    "directory": "/home/pi/APStreamline/build",
+    "command": "c++ -Istream_server@exe -I. -I.. -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -pthread -Werror -MD -MQ 'stream_server@exe/src_Common_QoSEstimator.cpp.o' -MF 'stream_server@exe/src_Common_QoSEstimator.cpp.o.d' -o 'stream_server@exe/src_Common_QoSEstimator.cpp.o' -c ../src/Common/QoSEstimator.cpp",
+    "file": "../src/Common/QoSEstimator.cpp"
+  },
+  {
+    "directory": "/home/pi/APStreamline/build",
+    "command": "c++ -Istream_server@exe -I. -I.. -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++14 -g -pthread -Werror -MD -MQ 'stream_server@exe/src_Common_FileRecorder.cpp.o' -MF 'stream_server@exe/src_Common_FileRecorder.cpp.o.d' -o 'stream_server@exe/src_Common_FileRecorder.cpp.o' -c ../src/Common/FileRecorder.cpp",
+    "file": "../src/Common/FileRecorder.cpp"
+  }
+]
