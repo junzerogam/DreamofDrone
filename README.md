@@ -95,6 +95,12 @@ pi@drone:~ $ mavproxy.py --master /dev/ttyACM0 --out [routerIP]:5001
 
 <div align=center>MAVProxy를 사용하여 5001포트로 연결한 후 원격으로 드론을 제어하는 모습</div>
 
+<p align="center">
+  <img src="docs/img/drone/drone_arm.gif">
+</p>
+
+<div align=center>위 방법으로 드론에 시동 거는 모습</div>
+
 ***
 > ✔ **Reverse SSH 원격 접속**
 <br>
