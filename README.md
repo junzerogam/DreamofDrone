@@ -150,6 +150,12 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
 ***
 > ✔ **드론 무선 AP에 스마트 쓰레기통 연결**
 <br>
+<p align="center">
+  <img src="docs/img/drone/ardupilot.PNG">
+</p>
+<div align=center>오픈소스 ArduPilot APSync 소프트웨어 패키지를 활용하여 드론의 무선 AP 활성화</div>
+
+<br>
 
 <p align="center">
   <img src="docs/img/drone/connect_to_droneAP.PNG">
