@@ -161,7 +161,7 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
 > ✔ **드론과 스마트 쓰레기통 TCP 통신**
 <br>
 <p align="center">
-  <img width=30% height=30% src="docs/img/final/drone_away.jpg">
+  <img width=30% height=30% src="docs/img/final/drone.jpg">
   <img width=30% height=30% src="docs/img/final/put_trash.jpg">
   <img width=30% height=30% src="docs/img/final/gcs.jpg">
 </p>
