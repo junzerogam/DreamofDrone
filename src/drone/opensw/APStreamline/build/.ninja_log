@@ -1,0 +1,11 @@
+# ninja log v5
+1	1337	1574474314	build.ninja	9354782530b1de6b
+7	6038	1574474320	stream_server@exe/src_Common_QoSEstimator.cpp.o	21bf7dc7685ac0d
+4	8079	1574474322	stream_server@exe/src_Common_PipelineManager.cpp.o	243bf336f718352a
+0	8275	1574474322	stream_server@exe/src_RTSPStreamServer_RTSPAdaptiveStreaming.cpp.o	9d74debfc035c41e
+1	10135	1574474324	stream_server@exe/src_RTSPStreamServer_stream_server.cpp.o	f127016a41674eef
+6042	11456	1574474326	stream_server@exe/src_Common_FileRecorder.cpp.o	445e89a6f11cd9d
+2	11669	1574474326	stream_server@exe/src_RTSPStreamServer_IPCMessageHandler.cpp.o	abf4a41c32dffc1b
+3	11920	1574474326	stream_server@exe/src_RTSPStreamServer_RTSPStreamServer.cpp.o	4b6e9fb9d5c4d5f5
+11920	13005	1574474327	stream_server	157e8c5b738ce53
+13005	14039	0	meson-install	cc6e1d7f2fe8dd69

@@ -1,0 +1,6 @@
+[options]
+prefix = /home/pi/start_apstreamline/
+backend = ninja
+
+[properties]
+

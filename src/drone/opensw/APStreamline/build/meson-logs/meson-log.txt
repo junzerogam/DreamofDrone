@@ -1,0 +1,56 @@
+Build started at 2019-11-23T01:58:34.128140
+Main binary: /usr/bin/python3
+Build Options: -Dprefix=/home/pi/start_apstreamline/ -Dbackend=ninja
+Python system: Linux
+The Meson build system
+Version: 0.52.0
+Source dir: /home/pi/APStreamline
+Build dir: /home/pi/APStreamline/build
+Build type: native build
+Project name: adaptive-streaming
+Project version: undefined
+C compiler for the build machine: cc (gcc 8.3.0 "cc (Raspbian 8.3.0-6+rpi1) 8.3.0")
+C linker for the build machine: GNU ld.bfd 2.31.1
+C++ compiler for the build machine: c++ (gcc 8.3.0 "c++ (Raspbian 8.3.0-6+rpi1) 8.3.0")
+C++ linker for the build machine: GNU ld.bfd 2.31.1
+C compiler for the host machine: cc (gcc 8.3.0 "cc (Raspbian 8.3.0-6+rpi1) 8.3.0")
+C linker for the host machine: GNU ld.bfd 2.31.1
+C++ compiler for the host machine: c++ (gcc 8.3.0 "c++ (Raspbian 8.3.0-6+rpi1) 8.3.0")
+C++ linker for the host machine: GNU ld.bfd 2.31.1
+Build machine cpu family: arm
+Build machine cpu: armv7l
+Host machine cpu family: arm
+Host machine cpu: armv7l
+Target machine cpu family: arm
+Target machine cpu: armv7l
+Dependency gstreamer-1.0 found: YES (cached)
+Dependency gstreamer-rtp-1.0 found: YES (cached)
+Dependency gstreamer-rtsp-1.0 found: YES (cached)
+Dependency gstreamer-rtsp-server-1.0 found: YES (cached)
+Dependency threads found: YES (cached)
+Build targets in project: 1
+Found ninja-1.8.2 at /usr/bin/ninja
+Running compile:
+Working directory:  /tmp/tmphjis8bof
+Command line:  c++ /tmp/tmphjis8bof/testfile.cpp -o /tmp/tmphjis8bof/output.obj -pipe -D_FILE_OFFSET_BITS=64 -c -std=c++14 
+
+Code:
+ int i = static_cast<int>(0);
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler accepts -std=c++14: YES
+Running compile:
+Working directory:  /home/pi/APStreamline/build/meson-private/tmp5f2gjt6x
+Command line:  c++ /home/pi/APStreamline/build/meson-private/tmp5f2gjt6x/testfile.cpp -o /home/pi/APStreamline/build/meson-private/tmp5f2gjt6x/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/arm-linux-gnueabihf/8/
+programs: =/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/bin/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/bin/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/bin/
+libraries: =/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/lib/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/lib/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../../arm-linux-gnueabihf/lib/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/8/:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/8/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+
+Compiler stderr:
+ 

@@ -1,5 +1,5 @@
-# Smart Trash Can data collection system for LTE Drone
-LTE 드론의 스마트 쓰레기통 데이터 수집 시스템<br>
+# Smart Trash Data Collection System Based on LTE Drone
+LTE 드론 기반 스마트 쓰레기통 데이터 수집 시스템<br>
 - **Team** : DoD<br>
 - **Contributors** : 조우형, 김준영, 박중후, 유예린<br>
 ## 💡 Summary
@@ -149,6 +149,12 @@ pi@drone:~/drone/reverse_ssh $ sudo crontab -e
 
 ***
 > ✔ **드론 무선 AP에 스마트 쓰레기통 연결**
+<br>
+<p align="center">
+  <img src="docs/img/drone/ardupilot.PNG">
+</p>
+<div align=center>오픈소스 ArduPilot APSync 소프트웨어 패키지를 활용하여 드론의 무선 AP 활성화</div>
+
 <br>
 
 <p align="center">
